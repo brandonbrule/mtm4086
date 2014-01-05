@@ -24,7 +24,7 @@ h2 {
   font-size: 1.45em; }
 
 h3 {
-  margin: 2em 0;
+  margin: 1em 0;
   font-size: 1.155em; }
 
 h4 {
@@ -107,8 +107,8 @@ nav {
     margin-bottom: 0.35em; }
 
 article {
-  padding: 2em;
-  margin: 2em 0; }
+  padding: 3em;
+  margin: 3em 0; }
   article ul {
     padding-left: 2em;
     text-align: left; }
@@ -124,7 +124,12 @@ article {
   .course-outline {
     position: fixed;
     left: 1em;
+    top: 1em;
     font-size: 0.65em; } }
+@media screen and (min-width: 1550px) {
+  body {
+    float: none;
+    margin: 0 auto; } }
 /* Code Highlighting */
 /* CSS Prettify */
 /* Hemisu Light */

@@ -1,115 +1,131 @@
-html{
-  text-rendering: optimizeLegibility;
-}
-body{
-  padding:2%;
-  font-size:1.785em;
-  color:#3d3d3d;
-  background:#fefefe;
-  line-height:1.5;
-  text-align:center;
-  font-family:helvetica, arial, sans-serif;
-  margin:0 auto;
-  max-width:800px;
-  text-rendering: optimizeLegibility;
-}
-h1,h2{
-  margin:0.25em 0;
-}
-h1,h2,h5{ 
-  text-transform:uppercase;
-}
-h3,h4,p{
-  text-align:left;
-}
-h2{
-  font-size:1em;
-}
-h3{
-  margin:0;
-  font-size:0.85em;
-}
-h4{
-  margin:0 0 0.25em 0;
-  line-height:1.25;
-  font-size:0.75em;
-  font-weight:800;
-}
-h3 + h4{
-  font-weight:300;
-  margin-bottom:1em;
-}
-h5{
-  border-bottom:1px solid #eee;
-  font-size:0.75em;
-  margin-bottom:0;
-  padding-bottom:0.5em;
-}
-p, ol, ul, blockquote{
-  font-family:georgia;
-  font-size:0.85em;
-  line-height:1.75;
-  margin:1.5em 0; 
-}
-h4 + p, h4 + pre{
-  margin-top:0;
-}
-ol, ul{
-  padding:0;
-}
-a{
-  word-break:break-all;
-  color:#0253be;
-}
-a:hover{
-  color:#0067f0;
-}
-blockquote{
-  font-style:italic;
-  font-weight:100;
-  font-size:1em;
-  color:#4e4e3e;
-  padding:0.75em 0;
-  border-top:1px solid #eee;
-  border-bottom:1px solid #eee;
-}
-hr{
-  margin:1.5em 0;
-  border:1px solid #eee;
-}
-img{
-  display:block;
-  width:100%;
-  height:auto;
-  margin:1.5em 0;
-}
-pre{
-  text-align:left;
-  background:#f1f1f1;
-  padding:1em;
-  margin:1.5em 0;
-  font-size:0.65em;
+html {
+  text-rendering: optimizeLegibility; }
+
+body {
+  font-size: 1em;
+  color: #3d3d3d;
+  background: #fefefe;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  text-rendering: optimizeLegibility; }
+
+h1, h2 {
+  margin: 0.25em 0; }
+
+h1, h2, h5 {
+  text-transform: uppercase; }
+
+h3, h4, p {
+  text-align: left; }
+
+h2 {
+  font-size: 1.45em; }
+
+h3 {
+  margin: 2em 0;
+  font-size: 1.155em; }
+
+h4 {
+  margin: 0 0 0 0;
+  line-height: 1.25;
+  font-size: 1.1em;
+  font-weight: 800;
+  text-align: center; }
+
+h3 + h4 {
+  font-weight: 300; }
+
+h5 {
+  border-bottom: 1px solid #eee;
+  font-size: 0.75em;
+  margin-bottom: 0;
+  padding-bottom: 0.5em; }
+
+p, ol, ul, blockquote {
+  font-family: georgia;
+  font-size: 1em;
+  line-height: 1.75;
+  margin: 0.875em 0 0 0; }
+
+ol, ul {
+  padding: 0; }
+
+a {
+  word-break: break-all;
+  color: #0253be; }
+
+a:hover {
+  color: #0067f0; }
+
+blockquote {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 1em;
+  color: #4e4e3e;
+  padding: 0.75em 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+
+hr {
+  margin: 1.5em 0;
+  border: 1px solid #eee; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5em 0; }
+
+pre {
+  text-align: left;
+  background: #f1f1f1;
+  padding: 1em;
+  margin: 1.5em 0;
+  font-size: 0.65em;
   white-space: pre-wrap;
-  white-space: -moz-pre-wrap;  
-  word-wrap: break-word;
-}
-.command-line pre{
-  background:#111;
-  color:#fff;
-}
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word; }
 
-header{
-  padding-bottom:5%;
-  margin-bottom:5%;
-  border-bottom:1px solid #eee;
-}
+.command-line pre {
+  background: #111;
+  color: #fff; }
 
-article{
-  margin-top:3em;
-  padding-top:3em;
-  border-top:1px solid #cecece;
-}
+header {
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+  border-bottom: 1px solid #eee; }
 
+nav {
+  margin-bottom: 3em; }
+  nav ul {
+    list-style: none;
+    font-size: 1.15em;
+    text-align: left; }
+  nav li {
+    margin-bottom: 0.35em; }
+
+article {
+  padding: 2em;
+  margin: 2em 0; }
+  article ul {
+    padding-left: 2em;
+    text-align: left; }
+
+#assignment1 {
+  background: #F5EEDB; }
+
+@media screen and (min-width: 1100px) {
+  body {
+    float: right;
+    margin: 0 2em 0 0; }
+
+  .course-outline {
+    position: fixed;
+    left: 1em;
+    font-size: 0.65em; } }
+/* Code Highlighting */
 /* CSS Prettify */
 /* Hemisu Light */
 /* Original theme - http://noahfrederick.com/vim-color-scheme-hemisu/ */
@@ -117,129 +133,101 @@ article{
 /* SPAN elements with the classes below are added by prettyprint. */
 /* plain text */
 .pln {
-  color: #111111;
-}
+  color: #111111; }
 
 @media screen {
   /* string content */
   .str {
-    color: #739200;
-  }
+    color: #739200; }
 
   /* a keyword */
   .kwd {
-    color: #739200;
-  }
+    color: #739200; }
 
   /* a comment */
   .com {
-    color: #999999;
-  }
+    color: #999999; }
 
   /* a type name */
   .typ {
-    color: #ff0055;
-  }
+    color: #ff0055; }
 
   /* a literal value */
   .lit {
-    color: #538192;
-  }
+    color: #538192; }
 
   /* punctuation */
   .pun {
-    color: #111111;
-  }
+    color: #111111; }
 
   /* lisp open bracket */
   .opn {
-    color: #111111;
-  }
+    color: #111111; }
 
   /* lisp close bracket */
   .clo {
-    color: #111111;
-  }
+    color: #111111; }
 
   /* a markup tag name */
   .tag {
-    color: #111111;
-  }
+    color: #111111; }
 
   /* a markup attribute name */
   .atn {
-    color: #739200;
-  }
+    color: #739200; }
 
   /* a markup attribute value */
   .atv {
-    color: #ff0055;
-  }
+    color: #ff0055; }
 
   /* a declaration */
   .dec {
-    color: #111111;
-  }
+    color: #111111; }
 
   /* a variable name */
   .var {
-    color: #111111;
-  }
+    color: #111111; }
 
   /* a function name */
   .fun {
-    color: #538192;
-  }
-}
+    color: #538192; } }
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
   .str {
-    color: #006600;
-  }
+    color: #006600; }
 
   .kwd {
     color: #006;
-    font-weight: bold;
-  }
+    font-weight: bold; }
 
   .com {
     color: #600;
-    font-style: italic;
-  }
+    font-style: italic; }
 
   .typ {
     color: #404;
-    font-weight: bold;
-  }
+    font-weight: bold; }
 
   .lit {
-    color: #004444;
-  }
+    color: #004444; }
 
   .pun, .opn, .clo {
-    color: #444400;
-  }
+    color: #444400; }
 
   .tag {
     color: #006;
-    font-weight: bold;
-  }
+    font-weight: bold; }
 
   .atn {
-    color: #440044;
-  }
+    color: #440044; }
 
   .atv {
-    color: #006600;
-  }
-}
+    color: #006600; } }
 /* Style */
-
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
   margin-top: 0;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 /* IE indents via margin-left */
 li.L0,
@@ -252,8 +240,7 @@ li.L6,
 li.L7,
 li.L8,
 li.L9 {
-  /* */
-}
+  /* */ }
 
 /* Alternate shading for lines */
 li.L1,
@@ -261,5 +248,4 @@ li.L3,
 li.L5,
 li.L7,
 li.L9 {
-  /* */
-}
+  /* */ }

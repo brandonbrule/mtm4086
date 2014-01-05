@@ -21,18 +21,17 @@ h3, h4, p {
   text-align: left; }
 
 h2 {
-  font-size: 1.45em; }
+  font-size: 1.35em; }
 
 h3 {
   margin: 1em 0;
   font-size: 1.155em; }
 
 h4 {
-  margin: 0 0 0 0;
+  margin: 1em 0;
   line-height: 1.25;
   font-size: 1.1em;
-  font-weight: 800;
-  text-align: center; }
+  font-weight: 800; }
 
 h3 + h4 {
   font-weight: 300; }
@@ -112,9 +111,6 @@ article {
   article ul {
     padding-left: 2em;
     text-align: left; }
-
-#assignment1 {
-  background: #F5EEDB; }
 
 @media screen and (min-width: 1100px) {
   body {

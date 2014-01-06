@@ -103,6 +103,29 @@
 
 <hr>
 
+<h2>Git Pages</h2>
+<p><a href="http://pages.github.com/">Git pages</a> are automatically hosted git repositories.</p>
+<p>Github.com Repository Settings -> Automatic Page Generator</p>
+<p>Select any theme, we'll merge our master repository with the github pages branch.  Then our site will be deployed after</p>
+<p>After setting up the page you'll notice a gh-pages branch with your repository</p>
+<pre>git branch</pre>
+<h3>Checkout the gh-pages branch</h3>
+<pre>git checkout gh-pages</pre>
+<h3>Pull gh-pages files</h3>
+<pre>git pull</pre>
+<h3>Manually delete default files</h3>
+<h3>Now merge in the master branch</h3>
+<pre>git merge master</pre>
+<h3>Add all the files</h3>
+<pre>git add -A</pre>
+<h3>Commit the files and message</h3>
+<pre>git commit -m "merging master to gh-pages"</pre>
+<h3>Pushing the files to the gh-pages branch</h3>
+<pre>git push</pre>
+
+
+<hr>
+
 <h2>Working with remote repositories</h2>
 <p><a href="http://stackoverflow.com/questions/1783405/git-checkout-remote-branch">remote repository</a></p>
 <h3>git remote add [name] [protocol://path.git]</h3>

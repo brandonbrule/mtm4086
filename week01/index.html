@@ -1,47 +1,130 @@
 <html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Git Add Remote Repo</title>
+  <title>Working with Github</title>
   <link rel="stylesheet" href="http://brandonbrule.github.io/mtm4086/css/style.css" media="screen" type="text/css">
 <style type="text/css"></style></head>
-<body class="command-line" cz-shortcut-listen="true">
+<body class="command-line interior-page" cz-shortcut-listen="true">
 	<header>
-		<h1>Git Add Remote Repo</h1>
-		<h2>Simple Command Line Reminder to Stay Up-To-Date With Other Repositories</h2>
+		<h1>Working with Github</h1>
+		<h2>Simple Command Line Reminder Cheatsheet</h2>
 	</header>
-	<p>Let's say I want to work with another repository and keep those files up-to-date in my own repo.</p>
-	<p><a href="http://wordpress.org/">WordPress</a> or <a href="https://drupal.org/">Drupal</a> is a great example of working with remote repositories.</p>
-	<p>We can merge in core updates as they are released and maintain a safe backup of the previous state in doing so.  Git is <a href="http://www.youtube.com/watch?v=y04-NzarItQ&amp;feature=player_detailpage#t=47">amazeballs</a>.</p>
-	<h3>Dun du du daa... git remote repos</h3>
-	<p>I will be using <a href="http://github.com">github</a> for my hosted repository.</p>
-	<p>I start with cloning my github repository. This is where my entire site will live.</p>
-	<h4>git clone</h4>
-<pre>git clone https://github.com/brandonbrule/my-repository.git
-</pre>
-	<h4>Make sure to go into the newly created repository directory.</h4>
-<pre>cd my-repository
-</pre>
-	<p>Next, we'll add WordPress as a remote repository to our own repository.</p>
-	<h4>git remote add [name] [protocol://path.git]</h4>
-<pre>git remote add wordpress https://github.com/WordPress/WordPress.git
-</pre>
-	<h4>A quick test to list all the repositories</h4>
-<pre>git remote -v
-</pre>
-	<p>This will list my repository as the origin and the WordPress repository as wordpress.</p>
-	<h4>Remember, it's git remote add [name I've set] [path]</h4>
+	<article>
+	<h3><a href="http://github.com">Github</a></strong></h3>
+	<ul>
+		<li>Sign up to github.com</li>
+		<li>Download App</li>
+		<li>Create new github repository</li>
+		<li>Clone repository from app or through command line</li>
+	</ul>
+
+<hr>
+
+<h2>Navigate to repository directory.</h2>
+<h3>Open Directory</h3>
+<pre>cd c:/sites/my-repository</pre>
+<h3>List Directories.</h3>
+<pre>dir</pre>
+<h3>Clone Repository</h3>
+<pre>git clone https://github.com/brandonbrule/my-repository.git</pre>
+
+<hr>
+
+<h2>Commiting Files and Changes.</h2>
+<h3>Git pull most recent changes</h3>
+<pre>git pull</pre>
+<h3>Add new files or changes</h3>
+<pre>git add -A</pre>
+<h3>Commit with message</h3>
+<pre>git commit -m "this is my commit message"</pre>
+<h3>Push changes and files to repo</h3>
+<pre>git push</pre>
+
+<hr>
+
+<h2>Working with git branches.</h2>
+<h3>Pull most recent changes</h3>
+<pre>git pull</pre>
+<h3>Create new branch</h3>
+<pre>git branch name_of_branch</pre>
+<h3>Push branch to repository</h3>
+<pre>git push origin name_of_branch</pre>
+<h3>Switch to branch - Checkout branch</h3>
+<pre>git checkout name_of_branch</pre>
+<h3>List Repository Branches</h3>
+<pre>git branch</pre>
+
+<hr>
+
+<h2>Committing to branch<h2>
+<h3>Make sure you're in your branch</h3>
+<pre>git checkout name_of_branch</pre>
+<h3>Pull most recent copy</h3>
+<pre>git pull</pre>
+<h3>Add files and changes</h3>
+<pre>git add -A</pre>
+<h3>Commit files, changes and message</h3>
+<pre>git commit -m "my message to myself and others"</pre>
+<h3>Push the files to the repository branch</h3>
+<pre>git push --set-upstream origin name_of_branch</pre>
+
+<hr>
+
+<h2>Switching branches</h2>
+<pre>git checkout name_of_branch</pre>
+<pre>git pull</pre>
+
+<hr>
+
+<h2>Merging Branches</h2>
+<h3>Checkout Branch - In this case we're merging back to master</h3>
+<pre>git checkout master</pre>
+<pre>git pull</pre>
+<h3>Merging the branch</h3>
+<pre>git merge name_of_branch</pre>
+<h3>Push the merge</h3>
+<pre>git push origin master</pre>
+
+<hr>
+
+<h2>Revert to commit including all files<h2>
+<h3>Checkout branch to revert</h3>
+<pre>git checkout name_of_branch</pre>
+<h3>Reset to revision number</h3>
+<pre>git reset --hard commit# </pre>
+<h3>Clean up the files</h3>
+<pre>git clean -fd</pre>
+<h3>Add the reverted setup</h3>
+<pre>git add -A</pre>
+<h3>Commiting the reverted setup</h3>
+<pre>git commit -m "reverting back all files to this"</pre>
+<h3>Force add might be needed</h3>
+<pre>git push origin master --force</pre>
+
+<hr>
+
+<h2>Working with remote repositories</h2>
+<p><a href="http://stackoverflow.com/questions/1783405/git-checkout-remote-branch">remote repository</a></p>
+<h3>git remote add [name] [protocol://path.git]</h3>
+<pre>git remote add wordpress https://github.com/WordPress/WordPress.git</pre>
+
+<h3>A quick test to list all the repositories</h3>
+<pre>git remote -v</pre>
+<p>This will list my repository as the origin and the WordPress repository as wordpress.</p>
+
+<h3>Remember, it's git remote add [name I've set] [path]</h3>
 <pre>$git remote -v
 origin https://github.com/brandonbrule/my-repository.git (fetch)
 origin https://github.com/brandonbrule/my-repository.git (push)
 wordpress      https://github.com/WordPress/WordPress.git (fetch)
 wordpress      https://github.com/WordPress/WordPress.git (push)
 </pre>
-	<p>Okay Awesome. The repos are listed, but there's no WordPress files on my computer yet.</p>
-	<h4>git fetch</h4>
-<pre>git fetch wordpress
-</pre>
-	<p>This will do its git thing, and come back with a list of branches and tags from the WordPress repository.</p>
-	<h4>Something like this will be returned.</h4>
+
+<h3>git fetch</h3>
+<pre>git fetch wordpress</pre>
+<p>This will do its git thing, and come back with a list of branches and tags from the WordPress repository.</p>
+
+<h3>Something like this will be returned.</h3>
 <pre>* [new branch]    3.5-branch -&gt; wordpress/3.5-branch
 * [new branch]    3.6-branch -&gt; wordpress/3.6-branch 
 * [new branch]    3.7-branch -&gt; wordpress/3.7-branch
@@ -51,19 +134,17 @@ wordpress      https://github.com/WordPress/WordPress.git (push)
 * [new tag]       2.0.1      -&gt; 2.0.1
 * [new tag]       2.5        -&gt; 2.5      
 </pre>
-	<p>Now we'll pull in the files of the master branch.</p>
-	<h4>pull = get files, push = transfer my changes</h4>
-<pre>git pull wordpress master
-</pre>
-<p>And downloading of the files will begin.</p>
-<h3>Congratulations, you've successfully added a remote repository into your own.</h3>
-<p>Now the usual steps of git add, commit and happy fun times here we come.  Everytime I want to pull in the newest version of WordPress I can just type</p>
-<pre>git pull wordpress master
-</pre>
-<p>and I will get those changes merged into my site repo, no worries about updates - revert back anytime.</p>
+<p>Now we'll pull in the files of the master branch.</p>
 
-<h4>Git add / commit reminder</h4>
-<pre>git add .
+<h3>pull = get files, push = transfer my changes</h3>
+<pre>git pull wordpress master</pre>
+<p>And downloading of the files will begin.</p>
+
+<pre>git pull wordpress master</pre>
+
+<h3>Git add / commit reminder</h3>
+<pre>
+git add .
 
 git commit -m "I'm committing WordPress. Horray"
 
@@ -72,5 +153,6 @@ git push origin master
 <p>git add .(all)<br>
 git commit -m "message"<br>
 git push origin(my-repository) master(master branch)</p>
-
-</body></html>
+</article>
+</body>
+</html>

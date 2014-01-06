@@ -83,9 +83,8 @@ img {
 pre {
   text-align: left;
   background: #f1f1f1;
-  padding: 1em;
+  padding: 1.1em;
   margin: 1.5em 0;
-  font-size: 0.65em;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   word-wrap: break-word; }

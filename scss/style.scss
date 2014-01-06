@@ -51,6 +51,9 @@ p, ol, ul, blockquote{
 ol, ul{
   padding:0;
 }
+ul ul{
+  margin:0.5em 0;
+}
 a{
   word-break:break-all;
   color:#0253be;

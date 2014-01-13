@@ -1,1 +1,458 @@
-<h1>Week 02 Horray</h2>
+<html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS Preprocessors</title>
+  <link rel="stylesheet" href="http://brandonbrule.github.io/mtm4086/css/style.css" media="screen" type="text/css">
+<style type="text/css">
+body{border:none!important;}
+.prettyprint{background:#ececec!important;}
+</style></head>
+<body class="command-line interior-page" cz-shortcut-listen="true">
+	<header>
+		<h1>CSS Preprocessors</h1>
+		<h2>Advantages of Sass and LESS</h2>
+	</header>
+	<article>
+
+<h2>Installing Sass. <a href="http://sass-lang.com/">http://sass-lang.com/</a></h2>
+<ul>
+	<li><a href="http://codepen.io/brandonbrule/pen/4fc85fc6c81c98795f48dd32ef24e032">Simple Variables and Mixins</a></li>
+	<li><a href="http://codepen.io/brandonbrule/pen/8cb8fca9c23a8287fcb5925458dd6232">Simple Responsive Layout</a></li>
+	<li><a href="http://codepen.io/brandonbrule/pen/cvGjE">Abstract Sass Loop function</a></li>
+	<li><a href="http://codepen.io/brandonbrule/pen/2daaadb3d910266d3d67be98918895d5">Another abstract use case</a></li>
+	<li><a href="http://codepen.io/brandonbrule/pen/bbe14c229350b84417db7b9a52fb571d">Maybe incriment the scale property?</a></li>
+</ul>
+<h3>Install Ruby Command Shell. (Included on Mac)</h3>
+<p><a href="http://rubyinstaller.org/">http://rubyinstaller.org/</a></p>
+<h3>Install Sass Gem</h3>
+<pre>gem install sass</pre>
+<h3>Watch Sass files and compile CSS files</h3>
+<pre>sass --watch scss:css</pre>
+<h3>Minify output</h3>
+<pre>sass --watch scss:css --style compressed</pre>
+
+<hr>
+
+<h3>Variables</h3>
+<pre class="prettyprint">
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+</pre>
+<h3>Outputs to</h3>
+<pre class="prettyprint">
+body{
+	font: 100% Helvetica, sans-serif;
+	color: #333;
+}
+</pre>
+<hr>
+<h3>Nesting style declarations</h3>
+<pre class="prettyprint">
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+</pre>
+<h3>Outputs to</h3>
+<pre class="prettyprint">
+nav ul { 
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+nav li { display:inline-block; }
+nav a {
+	display:block;
+	padding:6px 12px;
+	text-decoration:none;
+}
+</pre>
+<hr>
+<h3>Selectors</h3>
+<pre class="prettyprint">
+a {
+  font-weight: bold;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+</pre>
+<h3>Outputs to</h3>
+<pre class="prettyprint">
+a{
+	font-weight: bold;
+	text-decoration:none;
+}
+a:hover{ 
+	text-decoration:underline;
+}
+</pre>
+<hr>
+<h3>And the same goes for :first-child</h3>
+<p>We can also use inline media queries to keep things contained.</p>
+<pre class="prettyprint">
+/* -- 2 column layout component --*/
+/* ------------------------------ */
+.col-2{
+  @media (min-width:40em){ 
+    width:48.98%; margin-left:2%;
+    &:first-child { margin-left:0; }
+  }
+}
+</pre>
+<h3>Outputs to:</h3>
+<pre class="prettyprint">
+/* -- 2 column layout component --*/
+/* ------------------------------ */
+@media screen and (min-width:40em){	
+	.col-2{
+		width:48.98%;
+		margin-left:2%;
+	}
+	.col-2:first-child{
+		margin-left:0;
+	}
+}
+</pre>
+<hr>
+<h3>Extend and Inheritance</h3>
+<pre class="prettyprint">
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+</pre>
+<h3>Outputs to</h3>
+<pre class="prettyprint">
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+</pre>
+
+<hr>
+
+<h2>Keeping your css folder clean.</h2>
+<h3>By adding an underscore _ to the filename (_filename.scss) Sass will not create a css file.</h3>
+<p>This is helpful for organizing one minified css file that contains all of the sites styles.  We can organize and import unlimited filenames to keep our Sass components easy to update and maintain.</p>
+<pre class="prettyprint">@import "_typography";</pre>
+<h3>Organizing components is a crutial part in improving the time it takes to find styles to update.</h3>
+<p>Unlike CSS Sass import does not result in another HTTP request.  Each import is compiled to the outputed counterpart.  We can organize all of them in our style.scss file which outputs only one minified style.css file which we link to in the header.</p>
+<h4>style.scss</h4>
+<pre class="prettyprint">
+/* -- CSS Reset --*/
+/* ------------------------------ */
+@import '_reset';
+
+/* -- Global Variables --*/
+/* ------------------------------ */
+@import '_global-variables';
+
+/* -- Global Mixins --*/
+/* ------------------------------ */
+@import '_global-mixins';
+
+/* -- Baseline Typography --*/
+/* ------------------------------ */
+@import '_baseline-typography';
+
+/* -- Navigation Components --*/
+/* ------------------------------ */
+@import '_main-nav';
+@import '_breadcrum';
+@import '_pagination';
+@import '_footer-nav';
+
+/* -- Layout Components --*/
+/* ------------------------------ */
+@import '_layout';
+
+/* -- Sidebar Components --*/
+/* ------------------------------ */
+@import '_sidebar';
+@import '_ads';
+@import '_feed';
+
+/* -- Footer Components --*/
+/* ------------------------------ */
+@import '_footer';
+
+/* -- Page Specific Components --*/
+/* ------------------------------ */
+@import 'template/_home';
+@import 'template/_about';
+@import 'template/_contact';
+
+/* -- Shame --*/
+/* ------------------------------ */
+@import '_shame';
+
+</pre>
+<h4>In our html header we link to the one outputed css file</h4>
+<pre class="prettyprint">
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;<br/>  &lt;title&gt;CSS Preprocessors&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+</pre>
+
+<hr>
+
+<h2>Mixins</h2>
+<h3>Reusable CSS with dynamic values</h3>
+<p>Mixins are extremely helpful for cross browser compatibility.  With mixins we can keep things like browser prefixes contained and pass in dynmic values for reusability.  We can also use them to simplify the reuse of CSS properties.</p>
+<h4>A helpful test mixin to identify layout issues</h4>
+<pre class="prettyprint">
+/*--------  Mixins --------- */
+/* Simple Test Mixin - Red border around whatever */
+@mixin test() { 
+	outline:1px solid red; 
+}
+
+/* ------- Layout ---------- */
+.box { 
+	@include test; 
+	margin:1em 0;
+	width:250px; 
+}
+</pre>
+<h4>Output</h4>
+<pre class="prettyprint">
+.box{
+	outline:1px solid red;
+	margin:1em 0;
+	width:250px;
+}
+</pre>
+<hr>
+<h3>Cross Browser Rounded Corners Mixin</h3>
+<h4>Setting up variables to pass in dynamic values</h4>
+<pre class="prettyprint">
+/* Cross Browser Border Radius Mixin */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* Add rounded class to div or call @include within CSS delcaration */
+.rounded { 
+	@include border-radius(10px); 
+}
+
+nav{
+	li{ @include border-radius(2px); }
+}
+</pre>
+<h4>Output</h4>
+<pre class="prettyprint">
+.rounded{
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+       -o-border-radius: 10px;
+          border-radius: 10px;
+}
+
+nav li{
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+       -o-border-radius: 2px;
+          border-radius: 2px;	
+}
+</pre>
+<hr>
+<h3>Clearfix Mixin</h3>
+<pre class="prettyprint">
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.nav-list {
+  @include clearfix;
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  li {    
+    float: left;
+    margin-right: .5em;
+  }
+}
+</pre>
+<hr>
+<h3>Drop Shadow Mixin</h3>
+<h4>A setting default values</h4>
+<pre class="prettyprint">
+@mixin drop-shadow ($x: 1px, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
+  -webkit-box-shadow: $x $y $blur $spread rgba(125, 125, 125, $alpha);
+  -moz-box-shadow:    $x $y $blur $spread rgba(125, 125, 125, $alpha);
+  box-shadow:         $x $y $blur $spread rgba(125, 125, 125, $alpha);
+}
+
+.header{
+	@include dropshadow();
+}
+
+.container{
+	@include drop-shadow(2px, 2px, 2px, 1px, 0.5);
+}
+</pre>
+<h3>Output</h3>
+<pre class="prettyprint">
+.header{
+	-webkit-box-shadow:1px 1px 2px 0 0.25;
+	-moz-box-shadow:1px 1px 2px 0 0.25;
+	-box-shadow:1px 1px 2px 0 0.25;
+}
+
+.container{
+	-webkit-box-shadow:2px 2px 2px 2px 0.5;
+	-moz-box-shadow:2px 2px 2px 2px 0.5;
+	-box-shadow:2px 2px 2px 2px 0.5;
+}
+</pre>
+<hr>
+<h3>Animation Keyframe Cross Browser Mixin</h3>
+<pre class="prettyprint">
+/* Keyframe Mixin */
+
+/* Set up cross browser keyframe mixin */
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+
+/* Cross Browser Animation Mixin */
+@mixin animationMixin($name: fadeIn, $duration: 1s, $iteration-count: 1, $direction: normal, $timing-function: 1, $fill-mode: forwards, $delay: 0){
+	-webkit-animation-name: $name;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-iteration-count: $iteration-count;
+	-webkit-animation-direction: $direction;
+	-webkit-animation-timing-function: $timing-function;
+	-webkit-animation-fill-mode: $fill-mode;
+	-webkit-animation-delay: $delay;
+
+	-moz-animation-name: $name;
+	-moz-animation-duration: $duration;
+	-moz-animation-iteration-count: $iteration-count;
+	-moz-animation-direction: $direction;
+	-moz-animation-timing-function: $timing-function;
+	-moz-animation-fill-mode: $fill-mode;
+	-moz-animation-delay: $delay;
+
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-iteration-count: $iteration-count;
+	animation-direction: $direction;
+	animation-timing-function: $timing-function;
+	animation-fill-mode: $fill-mode;
+	animation-delay: $delay;
+}
+
+/* Fade In Animation */
+@include keyframes( fadeIn )
+{
+    0% {
+       opacity:0;
+        // you can also use mixins inside this mixin!
+        //@include transform( scale(1) );
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+/* Slide Down Animation */
+@include keyframes( slideDown )
+{
+    0% {
+       -webkit-transform: translate(0,-500px);
+       -moz-transform: translate(0,-500px);
+       transform: translate(0,-500px);
+    }
+
+    100% {
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+.fadein{ @include animationMixin(fadeIn, 0.75s, 1, normal, ease-out, forwards, 0); }
+
+.slide {  @include animationMixin(slideDown, 0.2s, 1, normal, ease-out, forwards, 0);
+</pre>
+</article>
+<script src="http://brandonbrule.com/syntax-highlight/prettify.js"></script>
+	<script>prettyPrint();</script>
+</body>
+</html>

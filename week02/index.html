@@ -1,458 +1,361 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>CSS Preprocessors</title>
-  <link rel="stylesheet" href="http://brandonbrule.github.io/mtm4086/css/style.css" media="screen" type="text/css">
-<style type="text/css">
-body{border:none!important;}
-.prettyprint{background:#ececec!important;}
-</style></head>
-<body class="command-line interior-page" cz-shortcut-listen="true">
+  <title>MTM-4086 Rich Internet Services.</title>
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body class="command-line">
 	<header>
-		<h1>CSS Preprocessors</h1>
-		<h2>Advantages of Sass and LESS</h2>
+		<h1>MTM-4086</h1>
+		<h2>Rich Internet Services.</h2>
 	</header>
-	<article>
+	<div class="course-outline">
+		<h2>Assignments</h2>
+		<nav>
+			<ul>
+				<li><a href="#assignment1">Assignment 01 - Your git repositories</a> - Due Week 09 (March 10)</li>
+				<li><a href="#assignment2">Assignment 02 - SASS and Less site template</a> - Due Week 05 (Jan 27)</li>
+				<li><a href="#assignment3">Assignment 03 - Ajax assignment</a> - Due Week 06 (Feb 10)</li>
+				<li><a href="#assignment4">Assignment 04 - Google Maps API</a> - Due Week 07 (Feb 24)</li>
+				<li><a href="#assignment5">Final - Site remake</a> - Due Week 09 (March 09)</li>
+			</ul>
+		</nav>
+		<h2>Class Links</h2>
+		<nav>
+			<ul>
+				<li><a href="#week1">Week 01</a> (Jan. 06) - <a href="#assignment1"><strong>Assignment 1</strong></a> - <a href="#week1">Version control and github</a></li>
+				<li><a href="#week2">Week 02</a> (Jan. 13) - <a href="#week2">CSS preprocessors, SASS and LESS</a></li>
+				<li><a href="#week3">Week 03</a> (Jan. 20) - <a href="#assignment2"><strong>Assignment 2</strong></a> <a href="#week3">CSS3 animation and advanced mixins</a></li>
+				<li><a href="#week4">Week 04</a> (Jan. 27) - <a href="#assignment2"><strong>Assignment 2</strong></a> - <a href="#week4">SASS and LESS site redevelopment</a></li>
+				<li><a href="#week5">Week 05</a> (Feb 03) - <a href="#week5">Performance measurement/Responsive JavaScript</a></li>
+				<li><a href="#week6">Week 06</a> (Feb 10) - <a href="#assignment3"><strong>Assignment 3</strong></a> - <a href="#week6">Ajax and dynamic loading</a></li>
+				<li><a href="#week7">Week 07</a> (Feb 24) - <a href="#assignment4"><strong>Assignment 4</strong></a> - <a href="#week7">Google Maps</a></li>
+				<li><a href="#week8">Week 08</a> (March 03) - <a href="#assignment5"><strong>Final</strong></a> - <a href="#week8">Steam inspired site rebuild</a></li>
+				<li><a href="#week9">Week 09</a> (March 10) - <a href="#week9">Final Class, How to get involved with the community</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="course-contents">
+		<article class="entry" id="assignment1">
+		  <section>
+		    <h2>Assignment 1 - git repository</h2>
+		    <span class="marks-due">Worth - <strong>20%</strong>  Due - Week 09</span>
+		    <p>Each assignment repository is worth 4%</p>
+		    <ul>
+		      <li>Assignment 2 - SASS Site Redevelopment (Due week 05)</li>
+		      <li>Assignment 2 - LESS Site Redevelopment (Due week 05)</li>
+		      <li>Assignment 3 - Dynamic Ajax Loader. (Due week 07)</li>
+		      <li>Assignment 4 - Google Maps. (Due week 08)</li>
+		      <li>Final Assignment - Site redevelopment (Due week 09)</li>
+		    </ul>
+		    <h3>Mark breakdown</h3>
+		    <ul>
+		    	<li>Staying up to date with Commits - <strong>2%</strong></li>
+		    	<li>Repository Organization - <strong>1%</strong></li>
+		    	<li>Git Page Created - <strong>1%</strong></li>
+		  </section>
+		</article>
 
-<h2>Installing Sass. <a href="http://sass-lang.com/">http://sass-lang.com/</a></h2>
-<ul>
-	<li><a href="http://codepen.io/brandonbrule/pen/4fc85fc6c81c98795f48dd32ef24e032">Simple Variables and Mixins</a></li>
-	<li><a href="http://codepen.io/brandonbrule/pen/8cb8fca9c23a8287fcb5925458dd6232">Simple Responsive Layout</a></li>
-	<li><a href="http://codepen.io/brandonbrule/pen/cvGjE">Abstract Sass Loop function</a></li>
-	<li><a href="http://codepen.io/brandonbrule/pen/2daaadb3d910266d3d67be98918895d5">Another abstract use case</a></li>
-	<li><a href="http://codepen.io/brandonbrule/pen/bbe14c229350b84417db7b9a52fb571d">Maybe incriment the scale property?</a></li>
-</ul>
-<h3>Install Ruby Command Shell. (Included on Mac)</h3>
-<p><a href="http://rubyinstaller.org/">http://rubyinstaller.org/</a></p>
-<h3>Install Sass Gem</h3>
-<pre>gem install sass</pre>
-<h3>Watch Sass files and compile CSS files</h3>
-<pre>sass --watch scss:css</pre>
-<h3>Minify output</h3>
-<pre>sass --watch scss:css --style compressed</pre>
+		<article class="entry" id="assignment2">
+		  <section>
+		    <h2>Assignment 2 - SASS and Less template </h2>
+		    <span class="marks-due">Worth - <strong>30%</strong>  Due - Week 05 (Feb 03)</span>
+		    <p><strong>15%</strong> SASS Template - <strong>15%</strong> Less Template</p>
+		    <p>Remake <a href="http://digg.com/">Digg.com</a> landing page in SASS and Less.</p>
+		    <ul>
+		    	<li>Global Styles - (3%)
+		    		<ul>
+				    	<li>Global variables for baseline typography - <strong>1%</strong></li>
+				    	<li>Global variables for primary, secondary, tritary colours - <strong>1%</strong></li>
+				    	<li>Global media queries variables - <strong>1%</strong></li>
+			    	</ul>
+			    </li>
+			    <li>Organization - (3%)
+			    	<ul>
+		    			<li>Folder structure - <strong>2%</strong></li>
+		    			<li>Minify CSS output - <strong>1%</strong></li>
+			    	</ul>
+			    </li>
+		    	<li>Development - (6%)
+		    		<ul>
+		    			<li>Base file organization and commenting - <strong>2%</strong></li>
+				    	<li>Seperate Layout Compontent - <strong>2%</strong></li>
+				    	<li>Seperate Navigation Compontent - <strong>2%</strong></li>
+			    	</ul>
+		    	<li>Design - <strong>3%</strong></li>
+		    	<li>Bonus - Enhance with CSS3 cross browser animation mixins - <strong>3%</strong></li>
+		    </ul>
+		  </section>
+		</article>
 
-<hr>
+		<article class="entry" id="assignment3">
+		  <section>
+		    <h2>Assignment 3 - Ajax Assignment</h2>
+		    <span class="marks-due">Worth - <strong>10%</strong>  Due - Week 06 (Feb 10)</span>
+		    <p>Create dynamic content pagination scroller.  Horizontal or Vertical, Similar to Steam or Netflix.</p>
+		    <ul>
+		    	<li>Functionality - (3%)
+		    		<ul>
+		    			<li>Dynamically load 5 slides - <strong>1%</strong></li>
+		    			<li>Images shouldn't load until pagination action is fired. <strong>1%</strong></li>
+		    			<li>JQuery Ajax - <strong>1%</strong></li>
+		    		</ul>
+		    	</li>
+		    	
+		    	<li>SASS Code - (5%)
+		    		<ul>
+			    		<li>File Structure - <strong>1%</strong></li>
+			    		<li>Baseline variables and mixins - <strong>1%</strong></li>
+			    		<li>Commenting - <strong>1%</strong></li>
+			    		<li>Formatting - <strong>1%</strong></li>
+			    		<li>Reusability, overnesting elements - <strong>1%</strong></li>
+			    	</ul>
+		    	</li>
+		    	<li>Design - <strong>2%</strong></li>
+		    	<li>Bonus - responsive - <strong>3%</strong></li>
+		    </ul>
+		  </section>
+		</article>
 
-<h3>Variables</h3>
-<pre class="prettyprint">
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+		<article class="entry" id="assignment4">
+		  <section>
+		    <h2>Assignment 4 - Google Maps</h2>
+		    <span class="marks-due">Worth - <strong>10%</strong>  Due - Week 07 (Feb 24)</h4
+		   span>
+		    <p>Custom Background, Custom Markers, Dynamically load iframe with thumbnail image onload</p>
+		    <ul>
+		    	<li>SASS Code - (5%)
+		    		<ul>
+			    		<li>File Structure - <strong>1%</strong></li>
+			    		<li>Baseline variables and mixins - <strong>1%</strong></li>
+			    		<li>Commenting - <strong>1%</strong></li>
+			    		<li>Formatting - <strong>1%</strong></li>
+			    		<li>Reusability, overnesting elements - <strong>1%</strong></li>
+			    	</ul>
+		    	</li>
+		    	<li>Functionality - (5%)
+		    		<ul>
+				    	<li>Thumbnail placeholder - <strong>1%</strong></li>
+				    	<li>onclick remove image load iframe . - <strong>2%</strong></li>
+				    	<li>Custom Background <strong>1%</strong></li>
+				    	<li>Custom Markers - <strong>1%</strong></li>
+				    </ul>
+				</li>
+				<li>Bonus - responsive - <strong>2%</strong></li>
+		    </ul>
+		  </section>
+		</article>
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
-</pre>
-<h3>Outputs to</h3>
-<pre class="prettyprint">
-body{
-	font: 100% Helvetica, sans-serif;
-	color: #333;
-}
-</pre>
-<hr>
-<h3>Nesting style declarations</h3>
-<pre class="prettyprint">
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+		<article class="entry" id="assignment5">
+		  <section>
+		    <h2>Final - Redevelop site with SASS</h2>
+		    <span class="marks-due">Worth - <strong>30%</strong>  Due - Week 07 (Feb 24)</span>
+		    <p>Recreate a site similar to <a href="store.steampowered.com">Steam.com</a>.</p>
+		    <p>Integrate built compontents over semester. Instanciate video, or google map iframe, ajax loader of content. Reuse any previous code</p>
+		    <p>
+		    <ul>
+		    	<li>SASS Code - (5%)
+		    		<ul>
+			    		<li>File Structure - <strong>1%</strong></li>
+			    		<li>Baseline variables and mixins - <strong>1%</strong></li>
+			    		<li>Commenting - <strong>1%</strong></li>
+			    		<li>Formatting - <strong>1%</strong></li>
+			    		<li>Reusability, overnesting elements - <strong>1%</strong></li>
+			    	</ul>
+		    	</li>
+		    	<li>Layout - (10%)
+		    		<ul>
+			    		<li>File Structure - <strong>1%</strong></li>
+			    		<li>Baseline variables and mixins - <strong>1%</strong></li>
+			    		<li>Commenting - <strong>1%</strong></li>
+			    		<li>Formatting - <strong>1%</strong></li>
+			    		<li>Reusability, overnesting elements - <strong>1%</strong></li>
+			    	</ul>
+		    	</li>
+		    	<li>Functionality - (10%)
+		    		<ul>
+		    			<li>Instanciated Iframe - (5%)
+			    			<ul>
+						    	<li>Thumbnail placeholder - <strong>1%</strong></li>
+						    	<li>onclick remove image load iframe . - <strong>2%</strong></li>
+						    	<li>Custom Background <strong>1%</strong></li>
+						    	<li>Custom Markers - <strong>1%</strong></li>
+						    </ul>
+						</li>
+						<li>Ajax Loader - (5%)
+				    		<ul>
+						    	<li>Dynamically load 10 slides - <strong>1%</strong></li>
+						    	<li>CSS3 Animation enhancement - <strong>2%</strong></li>
+				    			<li>Images shouldn't load until pagination action is fired. <strong>1%</strong></li>
+				    			<li>JQuery Ajax - <strong>1%</strong></li>
+						    </ul>
+						</li>
+				    </ul>
+				</li>
+				<li>Design - (5%)
+		    		<ul>
+			    		<li>Multi-Column Layout - <strong>1%</strong></li>
+			    		<li>Header - <strong>1%</strong></li>
+			    		<li>Footer - <strong>1%</strong></li>
+			    		<li>Homepage - <strong>1%</strong></li>
+			    		<li>Interior Page - <strong>1%</strong></li>
+			    	</ul>
+		    	</li>
+				<li>Bonus - responsive - <strong>5%</strong></li>
+		    </ul>
+		  </section>
+		</article>
+		<article class="entry" id="week1">
+		<h2>MTM4086 -  Week 01 - Jan. 06/2014</h2>
+			<section>
+				<h3>Introduction to Versioning</h3>
+				<p>What is versioning? Why is it handy? Why you need it.</p>
+				<ul>
+				  <li>A Safe Backup</li>
+				  <li>Auto Deployment</li>
+				  <li>Connecting the world.</li>
+				</ul>
+				<p>Open data, governments of the world repo's, it's changing the world.</p>
+				<p>Git vs SVN (conceptual)</p>
+				<p>github - Sign up to github</p>
+				<p>Create first repo, commit first repo, backup previous year file.</p>
 
-  li { display: inline-block; }
+				<p><a href="http://brandonbrule.github.io/mtm4086/week01/">Github Cheatsheet</a></p>
 
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
-}
-</pre>
-<h3>Outputs to</h3>
-<pre class="prettyprint">
-nav ul { 
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-nav li { display:inline-block; }
-nav a {
-	display:block;
-	padding:6px 12px;
-	text-decoration:none;
-}
-</pre>
-<hr>
-<h3>Selectors</h3>
-<pre class="prettyprint">
-a {
-  font-weight: bold;
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
-}
-</pre>
-<h3>Outputs to</h3>
-<pre class="prettyprint">
-a{
-	font-weight: bold;
-	text-decoration:none;
-}
-a:hover{ 
-	text-decoration:underline;
-}
-</pre>
-<hr>
-<h3>And the same goes for :first-child</h3>
-<p>We can also use inline media queries to keep things contained.</p>
-<pre class="prettyprint">
-/* -- 2 column layout component --*/
-/* ------------------------------ */
-.col-2{
-  @media (min-width:40em){ 
-    width:48.98%; margin-left:2%;
-    &:first-child { margin-left:0; }
-  }
-}
-</pre>
-<h3>Outputs to:</h3>
-<pre class="prettyprint">
-/* -- 2 column layout component --*/
-/* ------------------------------ */
-@media screen and (min-width:40em){	
-	.col-2{
-		width:48.98%;
-		margin-left:2%;
-	}
-	.col-2:first-child{
-		margin-left:0;
-	}
-}
-</pre>
-<hr>
-<h3>Extend and Inheritance</h3>
-<pre class="prettyprint">
-.message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-}
+				<p><a href="http://ontwik.com/douglas-crockford-javascript-programming-style-and-your-brain/">Javascript and the Brain</a></p>
+			</section>
+		</article>
+		<article class="entry" id="week2">
+		  <h2>MTM4086 - Week 02 - Jan. 13/2014</h2>
+		  <section>
+		    <h3>Introduction to CSS preprocessors and Modular Development</h3>
+		    <p>SASS, LESS, Stylus. Why SASS is the most popular and why agencies are using it.<br><br>CSS compiled by JavaScript, Ruby.</p>
+		    <p>Encourages more modular development. Grouping components together.</p>
+		    <p>Atomic Pattern Ideology and Brad Frost in the Industry</p>
+		    <p><b>Working:</b></p>
+		    <p>Installing Ruby, Installing SASS.</p>
+		    <p>Simple Horizontal navigation, Nesting Elements, Simple SASS Colour variable, Cross Browser Prefix Mixins</p>
+		    <p>Compiling options, multiline, singleline, minification.</p>
+		    <p><strong>SASS</strong> - <a href="http://sass-lang.com/">http://sass-lang.com/</a></p>
+		    <p><a href="http://brandonbrule.github.io/mtm4086/week02/">SASS Introduction</a></p>
+		    <p><strong>LESS</strong> - <a href="http://lesscss.org/">http://lesscss.org/</a></p>
+		    <p><a href="http://codepen.io/brandonbrule/pen/5b83e0bdbb9517339a7a87a74ce9679b">LESS Variables, Functions, and simple layout</a></p>
+		  </section>
+		</article>
+		<article class="entry" id="week2">
+		  <h2>MTM4086 -  Week 03 - Jan. 20/2014</h2>
+		  <section>
+		        <h3>Build a simple responsive SASS and LESS template, commit progress, measure performance.</h3>
+		        <p>Simple Header, Navigation, Multi-column layout - nesting SASS media queries. Setting up good SASS organizational patterns, include files, combine to minified output, error outputing</p>
+		        <p>Committing and commenting our progress as we go</p>
+		        <p>Complete Baseline Starting point - Simple reusable SASS template starting point. &nbsp;Easily add and remove components. 2 column, 3 column layout.</p>
+		        <p><a href="http://codepen.io/brandonbrule/pen/8cb8fca9c23a8287fcb5925458dd6232">http://codepen.io/brandonbrule/pen/8cb8fca9c23a8287fcb5925458dd6232</a></p>
+		        <p><a href="http://vimeo.com/channels/smashingconf/61755493?utm_source=CSS-Weekly&utm_campaign=Issue-51&utm_medium=email">Yahoo CSS Modulization</a></p>
+		  </section>
+		</article>
 
-.success {
-  @extend .message;
-  border-color: green;
-}
+		<article class="entry" id="week3">
+		  <h2>MTM4086 -  Week 04 - Jan. 27/2014</h2>
+		  <section>
+		    <h3>Progressive enhancements, CSS3 animation advantages, modernizer to detect browser features.</h3>
+		    <p>Progressive enhancement and internet statistics. Accessibility and the Law. Properly supporting legacy browsers and leverage what we have today.</p>
+		    <p>How browsers are developed, standards and how they develop over time, and understanding browser prefixes.</p>
+		    <p>SASS Functions to ease development with browser prefixes.</p>
+		    <h4>Avoid Animating with JavaScript/JQuery</h4>
+		    <p>Why its resource heavy, How CSS is optimized by the browser.<br><b>-</b>CSS Animation efficiency, multiple ways, why animation keyframe is preferred.<b><br>-</b>CSS Translate to leverage the GPU, Opacity leverages GPU.<br>- Mobile Importance - they are powerful, but are not that powerful, reduce memory footprint, reduce jank.<br><br>Creating animation on hover, toggling a element to add and remove a class triggering an animation.<br><br>Work on sliding menu. JavaScript onclick and onresize events.<br><br><a target="_blank" rel="nofollow" href="http://codepen.io/rlemon/pen/zdvxs">http://codepen.io/rlemon/pen/zdvxs</a><br><a href="http://codepen.io/brunodsgn/pen/hpJxI">http://codepen.io/brunodsgn/pen/hpJxI</a><br>
+		    <a href="http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">Translate better then absolute</a>
+		  </section>
+		</article>
 
-.error {
-  @extend .message;
-  border-color: red;
-}
+		<article class="entry" id="week4">
+		  <h2>MTM4086 -  Week 05 - Feb. 03/2014</h2>
+		  <p><strong>*Assignment 02 Due</strong></p>
+		  <section>
+		  	<h3>Part I - Performance as a top priority</h3> 
+		    <p>Mobile importance, global importance in the future as cell phone internet consumption rises.</p>
+		    <h4>Tools</h4>
+		      <p><strong>gtmetrix.com</strong> - google pagespeed and yahoo yslow toolset.</p>
+		      <p><strong>JS Lint</strong> - Validate the quality of your JS, learn best practices.</p>
+		      <p>Scan your site. Discuss output:</p>
+		        <ul>
+		          <li>gzip compression</li>
+		          <li>leverage browser caching</li>
+		          <li>image importance</li>
+		          <li>load time</li>
+		          <li>page weight</li>
+		        </ul>
+		        <h4>Chrome developer tools</h4>
+		        <ul>
+		          <li>Measuring memory, fps, identify areas that need attention</li>
+		          <li>Browser Paint and Reflow</li>
+		          <li>Measuring memory, fps, identify areas that need attention</li>
+		        </ul>
+		        <p>Be careful with resize and onscroll events. Debouncing</p>
 
-.warning {
-  @extend .message;
-  border-color: yellow;
-}
-</pre>
-<h3>Outputs to</h3>
-<pre class="prettyprint">
-.message, .success, .error, .warning {
-  border: 1px solid #cccccc;
-  padding: 10px;
-  color: #333;
-}
+		        <hr>
 
-.success {
-  border-color: green;
-}
+		    <h3>Part II - Responsive JavaScript</h3>
 
-.error {
-  border-color: red;
-}
+		    <p>MatchMedia( javascript media queries )</p>
+		    <p>MatchMedia constructor to separate loading desktop vs mobile functions</p>
+		    <p>Instantiating iframes, iframes stop page load, load with JavaScript.</p>
+		    <p>Picture Fill - Substituting image sources on different breakpoints with Javascript</p>
 
-.warning {
-  border-color: yellow;
-}
-</pre>
+		    <h3>Working with the DOM.</h3>
+		    <p>JavaScript Selectors - Identifying performance options</p>
+		    <p>Working with screen and element widths as changable variables.</p>
+		    <p>Calculating iframe aspect ratios.</p>
+		    <p>Equal Heights progressive enhancement.</p>
 
-<hr>
+		    <h4>Working:</h4>
+		    <ul>
+		      <li>Load Google Maps Iframe onClick</li>
+		      <li>Load Vimeo/Youtube video</li>
+		      <li>Banner with video drop down</li>
+		      <li>Picturefill different image sources</li>
+		    </ul>
+		  </section>
+		</article>
 
-<h2>Keeping your css folder clean.</h2>
-<h3>By adding an underscore _ to the filename (_filename.scss) Sass will not create a css file.</h3>
-<p>This is helpful for organizing one minified css file that contains all of the sites styles.  We can organize and import unlimited filenames to keep our Sass components easy to update and maintain.</p>
-<pre class="prettyprint">@import "_typography";</pre>
-<h3>Organizing components is a crutial part in improving the time it takes to find styles to update.</h3>
-<p>Unlike CSS Sass import does not result in another HTTP request.  Each import is compiled to the outputed counterpart.  We can organize all of them in our style.scss file which outputs only one minified style.css file which we link to in the header.</p>
-<h4>style.scss</h4>
-<pre class="prettyprint">
-/* -- CSS Reset --*/
-/* ------------------------------ */
-@import '_reset';
+		<article class="entry" id="week6">
+		  <h2>MTM4086 -  Week 06 - Feb. 10/2014</h2>
+		  <section>
+		    <h3>Assignment 3 - Ajax and dynamically loading content</h3>
+		     <p>Create dynamic content pagination scroller.  Horizontal or Vertical, Similar to Steam or Netflix.</p>
+		  </section>
+		</article>
 
-/* -- Global Variables --*/
-/* ------------------------------ */
-@import '_global-variables';
+		<article class="entry" id="week7">
+		  <h2>Week 07 - Feb. 24/2014</h2>
+		  <p><strong>*Assignment 3 Due</strong></p>
+		  <section>
+		    <h3>Assignment 4 - Working with Google Maps</h3>
+		    <p>Custom Background, Custom Markers, Dynamically load iframe with thumbnail image onload</p>
+		  </section>
+		</article>
 
-/* -- Global Mixins --*/
-/* ------------------------------ */
-@import '_global-mixins';
+		<article class="entry" id="week8">
+		  <h2>MTM4086 -  Week 08 - March 03/2014</h2>
+		  <p><strong>*Assignment 4 Due</strong></p>
+		  <section>
+		  <h3>Final Assignment - Redevelop site with SASS</h3>
+		  <p>Recreate a site similar to Steam.com.</p>
+		  <p>Integrate built compontents over semester. Instanciate video, or google map iframe, ajax loader of content. Reuse any previous code</p>
+		  </section>
+		</article>
 
-/* -- Baseline Typography --*/
-/* ------------------------------ */
-@import '_baseline-typography';
+		<article class="entry" id="week9">
+		  <h2>MTM4086 -  Week 09 - March 10/2014</h2>
+		  <section>
+		  <p><strong>*Final Assignment Due</strong></p>
+		  <h3>What now? Groups, events, meetups, and hackathons.</h3>
+		  <p>Ottawa JS<br>Ottawa Drones<br>Meetup.com<br>LadiesLearningCode<br>Open Data, Government Initiatives, and NGO involvement<br>UXCamp<br>Twitter<br>LinkedIn<br>Javascript, HTML5, and CSS weekly, Codepen</p><p>Industry Giants to follow:</p>
+		  <p>Work on any site, ask me anything. Group discussion of common problems and future things to look out for.  More oNode.js</p>
+		  </section>
+		</article>
+	</div>
 
-/* -- Navigation Components --*/
-/* ------------------------------ */
-@import '_main-nav';
-@import '_breadcrum';
-@import '_pagination';
-@import '_footer-nav';
-
-/* -- Layout Components --*/
-/* ------------------------------ */
-@import '_layout';
-
-/* -- Sidebar Components --*/
-/* ------------------------------ */
-@import '_sidebar';
-@import '_ads';
-@import '_feed';
-
-/* -- Footer Components --*/
-/* ------------------------------ */
-@import '_footer';
-
-/* -- Page Specific Components --*/
-/* ------------------------------ */
-@import 'template/_home';
-@import 'template/_about';
-@import 'template/_contact';
-
-/* -- Shame --*/
-/* ------------------------------ */
-@import '_shame';
-
-</pre>
-<h4>In our html header we link to the one outputed css file</h4>
-<pre class="prettyprint">
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;<br/>  &lt;title&gt;CSS Preprocessors&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; media=&quot;screen&quot; type=&quot;text/css&quot;&gt;
-&lt;/head&gt;
-</pre>
-
-<hr>
-
-<h2>Mixins</h2>
-<h3>Reusable CSS with dynamic values</h3>
-<p>Mixins are extremely helpful for cross browser compatibility.  With mixins we can keep things like browser prefixes contained and pass in dynmic values for reusability.  We can also use them to simplify the reuse of CSS properties.</p>
-<h4>A helpful test mixin to identify layout issues</h4>
-<pre class="prettyprint">
-/*--------  Mixins --------- */
-/* Simple Test Mixin - Red border around whatever */
-@mixin test() { 
-	outline:1px solid red; 
-}
-
-/* ------- Layout ---------- */
-.box { 
-	@include test; 
-	margin:1em 0;
-	width:250px; 
-}
-</pre>
-<h4>Output</h4>
-<pre class="prettyprint">
-.box{
-	outline:1px solid red;
-	margin:1em 0;
-	width:250px;
-}
-</pre>
-<hr>
-<h3>Cross Browser Rounded Corners Mixin</h3>
-<h4>Setting up variables to pass in dynamic values</h4>
-<pre class="prettyprint">
-/* Cross Browser Border Radius Mixin */
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-       -o-border-radius: $radius;
-          border-radius: $radius;
-}
-
-/* Add rounded class to div or call @include within CSS delcaration */
-.rounded { 
-	@include border-radius(10px); 
-}
-
-nav{
-	li{ @include border-radius(2px); }
-}
-</pre>
-<h4>Output</h4>
-<pre class="prettyprint">
-.rounded{
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-       -o-border-radius: 10px;
-          border-radius: 10px;
-}
-
-nav li{
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-      -ms-border-radius: 2px;
-       -o-border-radius: 2px;
-          border-radius: 2px;	
-}
-</pre>
-<hr>
-<h3>Clearfix Mixin</h3>
-<pre class="prettyprint">
-@mixin clearfix {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-.nav-list {
-  @include clearfix;
-  
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  
-  li {    
-    float: left;
-    margin-right: .5em;
-  }
-}
-</pre>
-<hr>
-<h3>Drop Shadow Mixin</h3>
-<h4>A setting default values</h4>
-<pre class="prettyprint">
-@mixin drop-shadow ($x: 1px, $y: 1px, $blur: 2px, $spread: 0, $alpha: 0.25) {
-  -webkit-box-shadow: $x $y $blur $spread rgba(125, 125, 125, $alpha);
-  -moz-box-shadow:    $x $y $blur $spread rgba(125, 125, 125, $alpha);
-  box-shadow:         $x $y $blur $spread rgba(125, 125, 125, $alpha);
-}
-
-.header{
-	@include dropshadow();
-}
-
-.container{
-	@include drop-shadow(2px, 2px, 2px, 1px, 0.5);
-}
-</pre>
-<h3>Output</h3>
-<pre class="prettyprint">
-.header{
-	-webkit-box-shadow:1px 1px 2px 0 0.25;
-	-moz-box-shadow:1px 1px 2px 0 0.25;
-	-box-shadow:1px 1px 2px 0 0.25;
-}
-
-.container{
-	-webkit-box-shadow:2px 2px 2px 2px 0.5;
-	-moz-box-shadow:2px 2px 2px 2px 0.5;
-	-box-shadow:2px 2px 2px 2px 0.5;
-}
-</pre>
-<hr>
-<h3>Animation Keyframe Cross Browser Mixin</h3>
-<pre class="prettyprint">
-/* Keyframe Mixin */
-
-/* Set up cross browser keyframe mixin */
-@mixin keyframes( $animationName )
-{
-    @-webkit-keyframes $animationName {
-        @content;
-    }
-    @-moz-keyframes $animationName {
-        @content;
-    }
-    @-o-keyframes $animationName {
-        @content;
-    }
-    @keyframes $animationName {
-        @content;
-    }
-}
-
-/* Cross Browser Animation Mixin */
-@mixin animationMixin($name: fadeIn, $duration: 1s, $iteration-count: 1, $direction: normal, $timing-function: 1, $fill-mode: forwards, $delay: 0){
-	-webkit-animation-name: $name;
-	-webkit-animation-duration: $duration;
-	-webkit-animation-iteration-count: $iteration-count;
-	-webkit-animation-direction: $direction;
-	-webkit-animation-timing-function: $timing-function;
-	-webkit-animation-fill-mode: $fill-mode;
-	-webkit-animation-delay: $delay;
-
-	-moz-animation-name: $name;
-	-moz-animation-duration: $duration;
-	-moz-animation-iteration-count: $iteration-count;
-	-moz-animation-direction: $direction;
-	-moz-animation-timing-function: $timing-function;
-	-moz-animation-fill-mode: $fill-mode;
-	-moz-animation-delay: $delay;
-
-	animation-name: $name;
-	animation-duration: $duration;
-	animation-iteration-count: $iteration-count;
-	animation-direction: $direction;
-	animation-timing-function: $timing-function;
-	animation-fill-mode: $fill-mode;
-	animation-delay: $delay;
-}
-
-/* Fade In Animation */
-@include keyframes( fadeIn )
-{
-    0% {
-       opacity:0;
-        // you can also use mixins inside this mixin!
-        //@include transform( scale(1) );
-    }
-
-    100% {
-        opacity:1;
-    }
-}
-
-/* Slide Down Animation */
-@include keyframes( slideDown )
-{
-    0% {
-       -webkit-transform: translate(0,-500px);
-       -moz-transform: translate(0,-500px);
-       transform: translate(0,-500px);
-    }
-
-    100% {
-        -webkit-transform: translate(0,0);
-        -moz-transform: translate(0,0);
-        transform: translate(0,0);
-    }
-}
-
-.fadein{ @include animationMixin(fadeIn, 0.75s, 1, normal, ease-out, forwards, 0); }
-
-.slide {  @include animationMixin(slideDown, 0.2s, 1, normal, ease-out, forwards, 0);
-</pre>
-</article>
-<script src="http://brandonbrule.com/syntax-highlight/prettify.js"></script>
-	<script>prettyPrint();</script>
 </body>
 </html>

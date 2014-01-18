@@ -112,6 +112,14 @@ article{
   ul{ padding-left:2em; text-align:left;}
 }
 
+
+/* Interior Page */
+.interior-page{ 
+  margin:0 auto; float:none;
+
+  article{ margin:1em 0; } 
+}
+
 @media screen and (min-width:1100px){
   body{ float:right; margin:0 2em 0 0; }
   .course-outline{

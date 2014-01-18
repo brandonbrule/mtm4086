@@ -114,6 +114,13 @@ article {
     padding-left: 2em;
     text-align: left; }
 
+/* Interior Page */
+.interior-page {
+  margin: 0 auto;
+  float: none; }
+  .interior-page article {
+    margin: 1em 0; }
+
 @media screen and (min-width: 1100px) {
   body {
     float: right;

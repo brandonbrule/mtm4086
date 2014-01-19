@@ -1,4 +1,3 @@
-mtm4086
+MTM4086 - Course Outline, Lessons, and Assignment Files
 =======
-
-Algonquin Rich Internet Services - 2014
+http://brandonbrule.github.io/mtm4086/

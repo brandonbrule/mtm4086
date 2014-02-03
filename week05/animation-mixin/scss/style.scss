@@ -1,0 +1,91 @@
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @-o-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
+/* Animation Mixin */
+/* Use - @include animationMixin(fadeIn, 1s, 1, normal, ease-out, forwards, 0)*/
+
+@mixin animationMixin($name: fadeIn, $duration: 1s, $iteration-count: 1, $direction: normal, $timing-function: 1, $fill-mode: forwards, $delay: 0){
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration-count;
+  -webkit-animation-direction: $direction;
+  -webkit-animation-timing-function: $timing-function;
+  -webkit-animation-fill-mode: $fill-mode;
+  -webkit-animation-delay: $delay;
+
+  -moz-animation-name: $name;
+  -moz-animation-duration: $duration;
+  -moz-animation-iteration-count: $iteration-count;
+  -moz-animation-direction: $direction;
+  -moz-animation-timing-function: $timing-function;
+  -moz-animation-fill-mode: $fill-mode;
+  -moz-animation-delay: $delay;
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: $iteration-count;
+  animation-direction: $direction;
+  animation-timing-function: $timing-function;
+  animation-fill-mode: $fill-mode;
+  animation-delay: $delay;
+}
+
+
+/* -- Setting up Reusable Animations -- */
+/* -- Fade In Animation -- */
+@include keyframes( fadeIn )
+{
+    0% {
+       opacity:0;
+        // you can also use mixins inside this mixin!
+        //@include transform( scale(1) );
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+/* -- Slide Down Animation -- */
+@include keyframes( slideDown )
+{
+    0% {
+       -webkit-transform: translate(0,-500px);
+       -moz-transform: translate(0,-500px);
+       transform: translate(0,-500px);
+    }
+
+    100% {
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+
+body{margin:0}
+
+/* -- Base Banners -- */
+.banner{ height:490px; width:100%; z-index:0; top:0;
+  background:url(../img/banner-placeholder.jpg) no-repeat center top fixed;
+  .interior-video-wrapper{ background:rgba(0,0,0,0.85);position:relative;top:-490px; }
+  iframe{ display:block; margin:0 auto; padding:0 0;} 
+}
+
+/* Fade In Animation */
+.banner .animate{ top:0; opacity:0; @include animationMixin(fadeIn, 0.75s, 1, normal, ease-out, forwards, 0); }
+
+/* Slide Down Animation */
+.banner .animate {  opacity:1; @include animationMixin(slideDown, 0.2s, 1, normal, ease-out, forwards, 0); }

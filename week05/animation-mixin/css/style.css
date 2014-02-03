@@ -1,0 +1,172 @@
+/* Animation Mixin */
+/* Use - @include animationMixin(fadeIn, 1s, 1, normal, ease-out, forwards, 0)*/
+body {
+  margin: 0;
+}
+
+/* -- Base Banners -- */
+.banner {
+  height: 490px;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  background: url(../img/banner-placeholder.jpg) no-repeat center top fixed;
+}
+.banner .interior-video-wrapper {
+  background: rgba(0, 0, 0, 0.85);
+  position: relative;
+  top: -490px;
+}
+.banner .animate {
+  top: 0;
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 0;
+  -moz-animation-name: fadeIn;
+  -moz-animation-duration: 0.75s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: normal;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-delay: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
+.banner iframe {
+  display: block;
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+/* Slide Down Animation */
+.banner .animate {
+  opacity: 1;
+  -webkit-animation-name: slideDown;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 0;
+  -moz-animation-name: slideDown;
+  -moz-animation-duration: 0.2s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: normal;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-delay: 0;
+  animation-name: slideDown;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
+
+/* Animation */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    transform: translate(0, -500px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-moz-keyframes slideDown {
+  0% {
+    -webkit-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    transform: translate(0, -500px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-o-keyframes slideDown {
+  0% {
+    -webkit-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    transform: translate(0, -500px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translate(0, -500px);
+    -moz-transform: translate(0, -500px);
+    transform: translate(0, -500px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}

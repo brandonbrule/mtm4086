@@ -1,0 +1,16 @@
+[
+	{
+	    "title" : "This is the first title", 
+	    "caption"   : "and the first caption underneath it",
+	    "url" : "coolthing.html",
+	    "imageUrl" : "img/image.jpg",
+	    "credits": "Why me, of course."
+	},
+	{
+	    "title" : "This is the second title", 
+	    "caption"   : "and the second caption underneath it",
+	    "url" : "http://google.com",
+	   	"imageUrl" : "img/another-generic-image.jpg",
+	    "credits": "You might of guessed it, I did it as well."
+	}
+]

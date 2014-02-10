@@ -2,6 +2,8 @@ $(document).ready(function() {
  doPager();
 });
 
+
+// Get link
 function doPager() {
  $('.pager a').click(function(e) {
   e.preventDefault();
@@ -15,3 +17,4 @@ function loadProducts(url) {
   doPager();
  });
 }
+

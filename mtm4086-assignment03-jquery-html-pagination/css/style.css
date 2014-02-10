@@ -47,5 +47,5 @@ body {
 }
 .loading {
  min-height: 5em;
- background: url('loading.gif') center center no-repeat;
+ background: url('http://preloaders.net/preloaders/287/Filling%20broken%20ring.gif') center center no-repeat;
 }

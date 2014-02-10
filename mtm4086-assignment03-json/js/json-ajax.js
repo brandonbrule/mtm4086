@@ -41,10 +41,12 @@ function loadJSON(){
               // the element to append everything to.
               var feedWrapper = document.getElementById('article-feed');
 
-              // Article Link - Title is text, url is href
+              // Article Heading and Link - Title is text, url is href
+              var articleHeading = document.createElement('h1');
               var articleLink = document.createElement('a');
               articleLink.setAttribute('href', jsonObj[key].url);
               articleLink.innerHTML = jsonObj[key].title;
+              articleHeading.appendChild(articleLink);
 
               // Article Image
               var articleImage = document.createElement('img');
@@ -52,7 +54,7 @@ function loadJSON(){
 
               // Appending html elements and values to my div article-feed
               feedWrapper.appendChild(articleImage);
-              feedWrapper.appendChild(articleLink);
+              feedWrapper.appendChild(articleHeading);
               
            }
 

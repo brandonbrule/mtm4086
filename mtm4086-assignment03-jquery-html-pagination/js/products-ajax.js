@@ -1,9 +1,11 @@
+// Onload Setup click events
 $(document).ready(function() {
- doPager();
+	doPager();
 });
 
 
-// Get link
+// Get links from paginated a tags
+// onclick get href value and pass it to the jquery load function
 function doPager() {
  $('.pager a').click(function(e) {
   e.preventDefault();
@@ -11,10 +13,10 @@ function doPager() {
  });
 }
 
+// empty elements from #inner div, add loading class, load in elements from link #inner div, remove loading class when complete.
 function loadProducts(url) {
- $('#outer').empty().addClass('loading').load(url + ' #inner', function() {
-  $('#outer').removeClass();
-  doPager();
+ $('#inner').empty().addClass('loading').load(url + ' #inner', function() {
+  $('#inner').removeClass();
  });
 }
 
